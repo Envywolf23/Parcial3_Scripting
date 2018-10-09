@@ -20,6 +20,8 @@ public abstract class ActorController : MonoBehaviour
 
     public OnDamageTaken onDamageTaken;
 
+    public int points;
+
     public float CurrentHP { get; protected set; }
 
     // Use this for initialization

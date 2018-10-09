@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 54798834034598086}
   m_Layer: 9
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 63dddc55265107842b8d2894d578cb2f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -116,6 +116,7 @@ MonoBehaviour:
   bulletGO: {fileID: 114656094135043094, guid: 19f015489a7248c40b20b3e49f7f308f, type: 2}
   healthPoints: 100
   spawnOffset: 1.5
+  points: 0
   walkable:
     serializedVersion: 2
     m_Bits: 4294967295

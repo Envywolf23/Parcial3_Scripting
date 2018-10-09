@@ -9,6 +9,12 @@ public class AIController : ActorController
     [SerializeField]
     private Root btRootNode;
 
+    [SerializeField]
+    private bool repeatInvoke = true;
+
+    [SerializeField]
+    private float rootInvokeTime = 1F;
+
     public void MoveAI()
     {
         MoveActor();
@@ -24,6 +30,14 @@ public class AIController : ActorController
         }
 
         AIMoveTest.Instance.onAIMoveIssued += MoveAI;
+
+        if (btRootNode != null)
+        {
+            if (repeatInvoke)
+            {
+                InvokeRepeating("ExecuteBtRoot", 0.5F, rootInvokeTime);
+            }
+        }
     }
 
     protected override void OnDestroy()
@@ -47,5 +61,10 @@ public class AIController : ActorController
         }
 
         return result;
+    }
+
+    private void ExecuteBtRoot()
+    {
+        btRootNode.Execute();
     }
 }

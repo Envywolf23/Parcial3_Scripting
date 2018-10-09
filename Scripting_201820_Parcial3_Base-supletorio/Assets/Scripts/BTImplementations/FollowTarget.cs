@@ -5,6 +5,7 @@ public class FollowTarget : Task
 {
     public override bool Execute()
     {
+        agent.SetDestination(GetComponent<TargetIsNear>().targetPosition);
         return base.Execute();
     }
 }

@@ -10,18 +10,12 @@
 
     public override bool Execute()
     {
-        bool result = false;
-        int childCount = 0;
-
-        if (CheckCondition())
+        bool result = CheckCondition();
+        if (result)
         {
             foreach (Node node in children)
             {
-                result = result || node.Execute();
-
-                print(string.Format("Executed selector child {0} with result {1}", childCount, result));
-
-                childCount += 1;
+                result = node.Execute();
 
                 if (ShouldBreak(result))
                 {

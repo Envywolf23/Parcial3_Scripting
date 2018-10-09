@@ -2,10 +2,11 @@
 
 [RequireComponent(typeof(Collider))]
 [RequireComponent(typeof(Rigidbody))]
+
 public class Bullet : MonoBehaviour
 {
     [SerializeField]
-    private float damagePts = 1F;
+    private float damagePts = 10F;
 
     [SerializeField]
     private float destroyTime = 3F;
