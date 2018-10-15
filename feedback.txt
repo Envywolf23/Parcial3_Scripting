@@ -1,0 +1,12 @@
+Feedback
+
+Examen (3.0/5.0)
+ * El AI siempre dispara al jugador, sin importar si este fue eliminado. No persiguen otros AI, y parece que los que quedan y son eliminados es por mera coincidencia.
+ * Cuando los HP de los actores llegan a 0 no pasa nada (no se ve desactivación o incremento del puntaje de cada actor).
+ * Hay un bug? En algunos casos, cuando una bala impacta al jugador o a un AI, este se va hasta una esquina del mapa y no puede salir de los bordes.
+ * El GameController parece desactivar a los jugadores una vez el juego termina. No obstante, no veo dónde se desactiva cada jugador.
+ * BT OK.
+ * El task 'Shoot' solo debía hacer llamado al Shoot del ControlledAI. NO había necesidad de hacer la lógica de instanciado ahí.
+ * El selector 'TargetIsNear' solo considera al jugador como objetivo. Debería ser cualquier participante.
+
+Total: 3.0 /5.0
